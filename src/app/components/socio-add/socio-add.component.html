@@ -1,0 +1,24 @@
+<!-- src/app/components/socio-add/socio-add.component.html -->
+<div class="form-container">
+  <h1>Adicionar Sócio</h1>
+  <form class="socio-form" (ngSubmit)="addSocio()">
+    <div class="form-group">
+      <label for="empresa">Empresa:</label>
+      <select [(ngModel)]="selectedEmpresaId" name="empresa" required>
+        <option value="">Selecione uma empresa</option>
+        <option *ngFor="let empresa of empresas" [value]="empresa.id">
+          {{ empresa.nome }}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="nome">Nome do Sócio:</label>
+      <input type="text" [(ngModel)]="novoSocio.nome" placeholder="Nome do sócio" name="nome" required>
+    </div>
+    <div class="form-group">
+      <label for="participacao">Participação (%):</label>
+      <input type="number" [(ngModel)]="novoSocio.participacao" placeholder="Participação" name="participacao" required>
+    </div>
+    <button type="submit" class="btn-submit">Adicionar Sócio</button>
+  </form>
+</div>

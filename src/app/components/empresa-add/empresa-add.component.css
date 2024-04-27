@@ -1,0 +1,50 @@
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .empresa-form {
+    display: grid;
+    grid-gap: 1rem;
+  }
+  
+  .empresa-form input,
+  .empresa-form button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .empresa-form input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .empresa-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .empresa-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 1rem;
+    }
+  
+    .empresa-form {
+      grid-template-columns: 1fr;
+    }
+  }
+  

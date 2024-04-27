@@ -1,0 +1,63 @@
+<!-- src/app/components/empresa-edit/empresa-edit.component.html -->
+<div class="form-container" *ngIf="empresa">
+  <h1>Editar Empresa</h1>
+  <form class="empresa-form">
+    <div class="form-group">
+      <label for="nome">Nome da empresa:</label>
+      <input id="nome" type="text" [(ngModel)]="empresa.nome" placeholder="Nome da empresa" required name="nome">
+    </div>
+    <div class="form-group">
+      <label for="cnpj">CNPJ:</label>
+      <input id="cnpj" type="text" [(ngModel)]="empresa.cnpj" placeholder="CNPJ" required name="cnpj">
+    </div>
+    <div class="form-group">
+      <label for="tituloEstabelecimento">Título do Estabelecimento:</label>
+      <input id="tituloEstabelecimento" type="text" [(ngModel)]="empresa.tituloEstabelecimento" placeholder="Título do Estabelecimento" name="tituloEstabelecimento">
+    </div>
+    <div class="form-group">
+      <label for="atividadeEconomicaPrincipal">Atividade Econômica Principal:</label>
+      <input id="atividadeEconomicaPrincipal" type="text" [(ngModel)]="empresa.atividadeEconomicaPrincipal" placeholder="Atividade Econômica Principal" required name="atividadeEconomicaPrincipal">
+    </div>
+    <div class="form-group">
+      <label for="naturezaJuridica">Natureza Jurídica:</label>
+      <input id="naturezaJuridica" type="text" [(ngModel)]="empresa.naturezaJuridica" placeholder="Natureza Jurídica" required name="naturezaJuridica">
+    </div>
+    <div class="form-group">
+      <label for="logradouro">Logradouro:</label>
+      <input id="logradouro" type="text" [(ngModel)]="empresa.logradouro" placeholder="Logradouro" required name="logradouro">
+    </div>
+    <div class="form-group">
+      <label for="numero">Número:</label>
+      <input id="numero" type="text" [(ngModel)]="empresa.numero" placeholder="Número" required name="numero">
+    </div>
+    <div class="form-group">
+      <label for="complemento">Complemento:</label>
+      <input id="complemento" type="text" [(ngModel)]="empresa.complemento" placeholder="Complemento" name="complemento">
+    </div>
+    <div class="form-group">
+      <label for="bairroDistrito">Bairro/Distrito:</label>
+      <input id="bairroDistrito" type="text" [(ngModel)]="empresa.bairroDistrito" placeholder="Bairro/Distrito" required name="bairroDistrito">
+    </div>
+    <div class="form-group">
+      <label for="municipio">Município:</label>
+      <input id="municipio" type="text" [(ngModel)]="empresa.municipio" placeholder="Município" required name="municipio">
+    </div>
+    <div class="form-group">
+      <label for="uf">UF:</label>
+      <input id="uf" type="text" [(ngModel)]="empresa.uf" placeholder="UF" required name="uf">
+    </div>
+    <div class="form-group">
+      <label for="cep">CEP:</label>
+      <input id="cep" type="text" [(ngModel)]="empresa.cep" placeholder="CEP" required name="cep">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="email" type="email" [(ngModel)]="empresa.email" placeholder="Email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="telefone">Telefone:</label>
+      <input id="telefone" type="text" [(ngModel)]="empresa.telefone" placeholder="Telefone" name="telefone">
+    </div>
+    <button (click)="updateEmpresa()">Atualizar Empresa</button>
+  </form>
+</div>

@@ -1,0 +1,19 @@
+<!-- src/app/components/empresa-list/empresa-list.component.html -->
+<div class="empresa-list-container">
+  <h2>Empresas</h2>
+  <div *ngFor="let empresa of empresas" class="card">
+    <!-- Cabeçalho do Card -->
+    <div class="card-header">
+      <h3>{{ empresa.nome }}</h3>
+      <div>
+        <a [routerLink]="['/empresas/edit', empresa.id]" class="edit-button">Editar</a>
+        <button (click)="deleteEmpresa(empresa.id)" class="delete-button">Excluir</button>
+      </div>
+    </div>
+    <!-- Corpo do Card -->
+    <div class="card-body">
+      <p><strong>CNPJ:</strong> {{ empresa.cnpj }}</p>
+      <p><strong>Endereço:</strong> {{ empresa.endereco }}</p>
+    </div>
+  </div>
+</div>

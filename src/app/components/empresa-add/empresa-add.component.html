@@ -1,0 +1,21 @@
+<!-- src/app/components/empresa-add/empresa-add.component.html -->
+<div class="form-container">
+  <h1>Adicionar Empresa</h1>
+    <form class="empresa-form" (ngSubmit)="addEmpresa()">
+      <input type="text" [(ngModel)]="novaEmpresa.nome" name="nome" placeholder="Razão Social" required />
+      <input type="text" [(ngModel)]="novaEmpresa.cnpj" name="cnpj" placeholder="CNPJ" required />
+      <input type="text" [(ngModel)]="novaEmpresa.tituloEstabelecimento" name="tituloEstabelecimento" placeholder="Título do Estabelecimento" />
+      <input type="text" [(ngModel)]="novaEmpresa.atividadeEconomicaPrincipal" name="atividadeEconomicaPrincipal" placeholder="Atividade Econômica Principal" required />
+      <input type="text" [(ngModel)]="novaEmpresa.naturezaJuridica" name="naturezaJuridica" placeholder="Natureza Jurídica" required />
+      <input type="text" [(ngModel)]="novaEmpresa.logradouro" name="logradouro" placeholder="Logradouro" required />
+      <input type="text" [(ngModel)]="novaEmpresa.numero" name="numero" placeholder="Número" required />
+      <input type="text" [(ngModel)]="novaEmpresa.complemento" name="complemento" placeholder="Complemento" />
+      <input type="text" [(ngModel)]="novaEmpresa.bairroDistrito" name="bairroDistrito" placeholder="Bairro/Distrito" required />
+      <input type="text" [(ngModel)]="novaEmpresa.municipio" name="municipio" placeholder="Município" required />
+      <input type="text" [(ngModel)]="novaEmpresa.uf" name="uf" placeholder="UF" required />
+      <input type="text" [(ngModel)]="novaEmpresa.cep" name="cep" placeholder="CEP" required />
+      <input type="email" [(ngModel)]="novaEmpresa.email" name="email" placeholder="Email" />
+      <input type="text" [(ngModel)]="novaEmpresa.telefone" name="telefone" placeholder="Telefone" />
+      <button type="submit">Adicionar Empresa</button>
+  </form>
+</div>

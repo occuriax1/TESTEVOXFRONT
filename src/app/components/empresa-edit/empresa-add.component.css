@@ -1,0 +1,58 @@
+/* src/app/components/empresa-edit/empresa-edit.component.css */
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empresa-form {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.empresa-form input,
+.empresa-form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.empresa-form input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
+  outline: none;
+}
+
+.empresa-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.empresa-form button:hover,
+.empresa-form button:focus {
+  background-color: #0056b3;
+}
+
+/* Responsividade e Acessibilidade */
+@media (max-width: 768px) {
+  .form-container {
+      padding: 1rem;
+  }
+
+  .empresa-form {
+      grid-template-columns: 1fr;
+  }
+
+  .empresa-form input,
+  .empresa-form button {
+      padding: 8px;
+  }
+}

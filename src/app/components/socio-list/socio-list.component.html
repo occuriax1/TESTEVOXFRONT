@@ -1,0 +1,16 @@
+<!-- src/app/components/socio-list/socio-list.component.html -->
+<div class="socio-list-container">
+  <h2>Sócios</h2>
+  <div *ngFor="let socio of socios" class="card">
+    <div class="card-header">
+      <h3>{{ socio.nome }} - {{ socio.empresaNome }}</h3> <!-- Adiciona o nome da empresa -->
+      <div>
+        <a [routerLink]="['/socios/edit', socio.id]" class="edit-button">Editar</a>
+        <button (click)="deleteSocio(socio.id)" class="delete-button">Excluir</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <p><strong>Participação:</strong> {{ socio.participacao }}%</p>
+    </div>
+  </div>
+</div>

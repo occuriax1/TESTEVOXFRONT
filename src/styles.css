@@ -1,1 +1,131 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  header img {
+    max-width: 100px;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .menu-item {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-item:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 600px) {
+    .menu {
+      flex-direction: column;
+    }
+  
+    .menu-item {
+      margin-bottom: 10px;
+    }
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  button, .button-like {
+    background-color: #a72828;
+    border: none;
+    padding: 8px 15px;
+    margin-right: 5px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover, .button-like:hover {
+    background-color: #218838;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-text {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Responsividade para telas pequenas */
+  @media (max-width: 768px) {
+    .input-text, button, .button-like, .menu-item {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    header {
+      flex-direction: column;
+    }
+  
+    header h1 {
+      margin-bottom: 10px;
+    }
+  }
+  
