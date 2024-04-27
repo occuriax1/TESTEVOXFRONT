@@ -9,7 +9,7 @@ import { Empresa } from '../models/empresa.model';
   providedIn: 'root'
 })
 export class EmpresaService {
-  private apiUrl = 'http://localhost:8000/api/empresas';
+  private apiUrl = 'http://127.0.0.1:8000/api/empresas';
 
   constructor(private http: HttpClient) {}
   

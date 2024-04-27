@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Socio } from '../models/socio.model';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+//import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +14,7 @@ export class SocioService {
   constructor(private http: HttpClient) {}
 
   getSocios(): Observable<Socio[]> {
-    return this.http.get<any>(this.apiUrl).pipe(
-      map(response => response['hydra:member'] as Socio[])
-    );
+    return this.http.get<Socio[]>(this.apiUrl);
   }
   
   createSocio(socio: Socio): Observable<Socio> {
@@ -27,8 +25,8 @@ export class SocioService {
     return this.http.get<Socio>(`${this.apiUrl}/${id}`);
   }
 
-  updateSocio(id: number, empresa: Socio): Observable<Socio> {
-    return this.http.put<Socio>(`${this.apiUrl}/${id}`, empresa);
+  updateSocio(id: number, socio: Socio): Observable<Socio> {
+    return this.http.put<Socio>(`${this.apiUrl}/${id}`, socio);
   }
 
   deleteSocio(id: number): Observable<void> {

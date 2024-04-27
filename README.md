@@ -36,6 +36,7 @@ Para executar o projeto localmente, siga as instruções abaixo:
 
 - Node.js
 - npm (Gerenciador de pacotes para JavaScript)
+- npm install --save sweetalert2
 
 ### Instalação
 

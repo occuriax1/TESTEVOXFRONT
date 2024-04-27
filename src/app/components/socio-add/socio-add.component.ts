@@ -14,7 +14,11 @@ import { Socio } from 'src/app/models/socio.model';
 export class SocioAddComponent implements OnInit {
   empresas: Empresa[] = [];
   selectedEmpresaId?: number | null = null; 
-  novoSocio: Socio = { nome: '', participacao: 0, empresaId: undefined };
+  novoSocio: Socio = {
+    nome: '',
+    participacao: 0,
+    empresa: null, 
+  };
 
   constructor(
     private empresaService: EmpresaService,
@@ -34,7 +38,7 @@ export class SocioAddComponent implements OnInit {
 
   addSocio(): void {
     if (this.selectedEmpresaId) {
-      this.novoSocio.empresaId = this.selectedEmpresaId;
+      this.novoSocio.empresa = `/api/empresas/${this.selectedEmpresaId}`;
       this.socioService.createSocio(this.novoSocio).subscribe(
         (socio) => {
           Swal.fire({
