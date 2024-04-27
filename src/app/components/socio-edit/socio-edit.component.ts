@@ -1,6 +1,6 @@
 // src/app/components/socio-edit/socio-edit.component.ts
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';  // Importar Router
 import { EmpresaService } from '../../services/empresa.service';
 import { SocioService } from '../../services/socio.service';
 import { Empresa } from '../../models/empresa.model';
@@ -20,7 +20,8 @@ export class SocioEditComponent implements OnInit {
   constructor(
     private empresaService: EmpresaService,
     private socioService: SocioService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router  
   ) {}
 
   ngOnInit(): void {
@@ -60,7 +61,7 @@ export class SocioEditComponent implements OnInit {
       this.socioService.updateSocio(this.socio.id, this.socio).subscribe({
         next: () => {
           Swal.fire('Sucesso', 'Sócio atualizado com sucesso!', 'success');
-          // Redirecionar ou atualizar a interface do usuário conforme necessário
+          this.router.navigate(['/socios']);
         },
         error: () => {
           Swal.fire('Erro', 'Erro ao atualizar sócio.', 'error');
